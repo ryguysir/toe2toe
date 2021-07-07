@@ -20,8 +20,10 @@ function App() {
     playerOne: true,
     playerTwo: false,
     playerTurn: 0,
+    gameOver: false,
     board: ["", "", "", "", "", "", "", "", ""],
   });
+  const [gameWin, setGameWin] = useState(undefined);
 
   return (
     <ChakraProvider>
@@ -42,6 +44,8 @@ function App() {
             playerNumber={playerNumber}
             currentGameInfo={currentGameInfo}
             setCurrentGameInfo={setCurrentGameInfo}
+            gameWin={gameWin}
+            setGameWin={setGameWin}
           />
         ) : null}
       </Box>

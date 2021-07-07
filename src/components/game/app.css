@@ -8,12 +8,11 @@
   justify-content: center;
   align-items: center;
   cursor: pointer;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
 }
-
 .board-tile i {
-  transform: scale(2);
+  transform: scale(4);
 }
-
 .fullscreen-notice {
   position: absolute;
   width: 100vw;
@@ -25,32 +24,36 @@
   justify-content: center;
   align-items: center;
 }
-
+.game-win-announcement {
+  position: absolute;
+  z-index: 12;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.board-jiggle {
+  animation: wiggle 0.4s ease-in-out;
+  transform: rotate(0deg);
+}
 .hidden {
   display: none;
   opacity: 0;
 }
 
-.board-jiggle {
-  animation: board-jiggle 0.75s ease-in-out;
-  transform: rotate(0deg);
-}
-
-@keyframes board-jiggle {
+@keyframes wiggle {
   0% {
     transform: rotate(0deg);
   }
-  20% {
-    transform: rotate(45deg);
+  25% {
+    transform: rotate(5deg);
   }
-  40% {
-    transform: rotate(-45deg);
+  50% {
+    transform: rotate(-5deg);
   }
-  60% {
-    transform: rotate(35deg);
-  }
-  80% {
-    transform: rotate(-25deg);
+  75% {
+    transform: rotate(5deg);
   }
   100% {
     transform: rotate(0deg);

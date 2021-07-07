@@ -25,6 +25,7 @@ const StartGame = ({ setGameID, setGameCreated, setPlayerNumber }) => {
       playerTwo: false,
       playerCount: 0,
       playerTurn: 0,
+      gameOver: false,
       board: ["", "", "", "", "", "", "", "", ""],
     });
   };
