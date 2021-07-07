@@ -1,0 +1,58 @@
+.board-tile {
+  width: 100px;
+  height: 100px;
+  background: white;
+  border-radius: 6px;
+  margin: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.board-tile i {
+  transform: scale(2);
+}
+
+.fullscreen-notice {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hidden {
+  display: none;
+  opacity: 0;
+}
+
+.board-jiggle {
+  animation: board-jiggle 0.75s ease-in-out;
+  transform: rotate(0deg);
+}
+
+@keyframes board-jiggle {
+  0% {
+    transform: rotate(0deg);
+  }
+  20% {
+    transform: rotate(45deg);
+  }
+  40% {
+    transform: rotate(-45deg);
+  }
+  60% {
+    transform: rotate(35deg);
+  }
+  80% {
+    transform: rotate(-25deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
