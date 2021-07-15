@@ -3,6 +3,7 @@ import { Flex, Grid, Heading, Button } from "@chakra-ui/react";
 import firebase from "../../firebase";
 
 import GameIDWindow from "../game-id-window/GameIDWindow";
+import Tile from "./Tile";
 import "./app.css";
 
 const Game = ({
@@ -97,6 +98,7 @@ const Game = ({
         justifyContent="center"
         flexDirection="column"
       >
+        <Tile />
         {/*waiting for second player notice*/}
         <div className={`${currentGameInfo.playerCount < 1 ? "fullscreen-notice" : "hidden"}`}>
           <Flex display="table" background="gray.200" p={3} rounded={6}>
